@@ -24,4 +24,4 @@ Add null value to any data type using `Data.NullPointer`!
 
 ## What if I forget to check if a value is null?
 
-You'll get a `NullPointerException`, just like in Java!
+You'll get a `NullPointerException`, just like in Java! Brillant!
