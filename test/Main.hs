@@ -15,3 +15,6 @@ main = hspec $ do
 
     it "using it throws NullPointerException" $ do
         evaluate null `shouldThrow` (== NullPointerException)
+
+    it "undefined is not null" $ do
+        evaluate (isNull undefined) `shouldThrow` anyException
