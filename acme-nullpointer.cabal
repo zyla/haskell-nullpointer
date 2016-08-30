@@ -1,4 +1,4 @@
-name:                nullpointer
+name:                acme-nullpointer
 version:             0.1.0.0
 synopsis:            Null pointers in Haskell
 
@@ -22,8 +22,10 @@ library
 
 test-suite tests
   type:                exitcode-stdio-1.0
-  main-is:             test/Main.hs
-  build-depends:       base, hspec
+  main-is:             Main.hs
+  hs-source-dirs:      test
+  build-depends:       base, hspec, acme-nullpointer
+  default-language:    Haskell2010
 
 source-repository head
   type:     git
