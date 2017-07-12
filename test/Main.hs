@@ -1,3 +1,4 @@
+--{-# OPTIONS_GHC -O0 #-}
 module Main where
 
 import Prelude hiding (null)
@@ -20,4 +21,6 @@ main = hspec $ do
         evaluate (isNull undefined) `shouldThrow` anyException
 
     it "values using null are not null" $ do
-        evaluate (isNull (1 + null)) `shouldThrow` (== NullPointerException)
+        evaluate (isNull (someCalculation null)) `shouldThrow` (== NullPointerException)
+
+someCalculation x = x > 10
