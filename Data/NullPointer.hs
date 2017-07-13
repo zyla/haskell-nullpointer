@@ -1,9 +1,11 @@
 {-# LANGUAGE MagicHash #-}
+{-# LANGUAGE DeriveDataTypeable #-}
 
 -- | Adds @null@ value to any Haskell data type.
 module Data.NullPointer (null, isNull, NullPointerException(..)) where
 
 import Prelude hiding (null)
+import Data.Typeable
 import Control.Exception (Exception, throw)
 import GHC.Prim (reallyUnsafePtrEquality#)
 
@@ -21,6 +23,6 @@ isNull x =
     _ -> True
 
 -- | Thrown on attempt to use 'null'.
-data NullPointerException = NullPointerException deriving (Eq, Show)
+data NullPointerException = NullPointerException deriving (Eq, Show, Typeable)
 
 instance Exception NullPointerException
