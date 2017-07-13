@@ -1,4 +1,4 @@
-# `Data.NullPointer`
+# `Data.NullPointer` ![build status](https://travis-ci.org/zyla/haskell-nullpointer.svg?branch=master)
 
 Tired of using `Maybe`? Wrapping values in `Just` makes you sick?
 Missing your `NullPointerException`s?
